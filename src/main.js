@@ -89,3 +89,8 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+//给axios配置默认属性
+axios.defaults.timeout= 2000;//配置了默认超时时间
+axios.defaults.baseURL='http://124.71.112.154:8001';
+//配置请求的地址，若不配置，则axios默认从自身的地址发送请求；若配置了，写请求时不需要带以上写过的地址，只需要写后面的地址会自动拼接！
