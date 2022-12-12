@@ -367,7 +367,7 @@ export default {
     //获取全部督导信息
     async getSupervisorList(page = 1, limit, queryInfo) {
       const { data: res } = await this.$http.post(
-        `/api/supervise/list/${page}/${limit}`,
+        `http://124.71.112.154:8001/api/supervise/list/${page}/${limit}`,
         queryInfo
       );
       this.supervisorlist = res.data.rows;
